@@ -1,8 +1,10 @@
+import { useAppUrl } from '@/hooks/useAppLink'
 import { type NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 
 const Home: NextPage = () => {
+  const appUrl = useAppUrl()
   return (
     <>
       <Head>
@@ -15,7 +17,7 @@ const Home: NextPage = () => {
           <h1 className="text-5xl font-extrabold tracking-tight sm:text-[5rem]">
             Placeholder title
           </h1>
-          <Link href={'/app'}>Go to App</Link>
+          <Link href={appUrl}>Go to App</Link>
         </div>
       </main>
     </>

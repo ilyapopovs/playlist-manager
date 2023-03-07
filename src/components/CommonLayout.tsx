@@ -1,9 +1,13 @@
-import { ActiveLink } from '@/pages/components/ActiveLink'
+import { ActiveLink } from '@/components/ActiveLink'
+import { isAuthenticatedAtom, useLogout } from '@/spotify/SpotifyAuth'
+import { useAtomValue } from 'jotai'
 import { useRouter } from 'next/router'
 import { type FC, type PropsWithChildren } from 'react'
 
 export const CommonLayout: FC<PropsWithChildren> = ({ children }) => {
   const { isReady, pathname } = useRouter()
+  const isAuthenticated = useAtomValue(isAuthenticatedAtom)
+  const logout = useLogout()
 
   console.log('router', { isReady, pathname })
 
@@ -16,6 +20,13 @@ export const CommonLayout: FC<PropsWithChildren> = ({ children }) => {
         <ActiveLink activeClassName={'font-bold'} href={'/app'}>
           App
         </ActiveLink>
+        {isAuthenticated ? (
+          <button onClick={() => void logout()}>Log out</button>
+        ) : (
+          <ActiveLink activeClassName={'font-bold'} href={'/app/login'}>
+            Login
+          </ActiveLink>
+        )}
       </header>
       {children}
     </div>
