@@ -1,4 +1,7 @@
-import { isAuthenticatedAtom, useAuthenticate } from '@/spotify/SpotifyAuth'
+import {
+  isAuthenticatedAtom,
+  useAuthenticate,
+} from '@/modules/spotify/SpotifyAuth'
 import { useAtomValue } from 'jotai'
 import { useRouter } from 'next/router'
 

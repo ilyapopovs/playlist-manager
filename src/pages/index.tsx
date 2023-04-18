@@ -1,4 +1,4 @@
-import { useAppUrl } from '@/hooks/useAppLink'
+import { useAppUrl } from '@/modules/common/hooks/useAppLink'
 import { type NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'

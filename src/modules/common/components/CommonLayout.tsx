@@ -1,5 +1,5 @@
-import { ActiveLink } from '@/components/ActiveLink'
-import { isAuthenticatedAtom, useLogout } from '@/spotify/SpotifyAuth'
+import { ActiveLink } from '@/modules/common/components/ActiveLink'
+import { isAuthenticatedAtom, useLogout } from '@/modules/spotify/SpotifyAuth'
 import { useAtomValue } from 'jotai'
 import { useRouter } from 'next/router'
 import { type FC, type PropsWithChildren } from 'react'

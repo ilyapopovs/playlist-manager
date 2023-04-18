@@ -1,9 +1,9 @@
 import { type AppType } from 'next/app'
 
-import { api } from '@/utils/api'
+import { api } from '@/modules/common/utils/api'
 
-import '@/styles/globals.css'
-import { CommonLayout } from '@/components/CommonLayout'
+import '@/modules/common/styles/globals.css'
+import { CommonLayout } from '@/modules/common/components/CommonLayout'
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
