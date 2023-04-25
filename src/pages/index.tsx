@@ -5,6 +5,7 @@ import Link from 'next/link'
 
 const Home: NextPage = () => {
   const appUrl = useAppUrl()
+
   return (
     <>
       <Head>

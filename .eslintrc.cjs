@@ -25,9 +25,9 @@ module.exports = {
         fixStyle: 'inline-type-imports',
       },
     ],
-    indent: ['error', 2],
+    // indent: ['error', 2],
     'linebreak-style': ['error', 'unix'],
-    quotes: ['warn', 'single'],
+    // quotes: ['warn', 'single'],
     semi: ['error', 'never'],
     'react/jsx-sort-props': [
       'warn',

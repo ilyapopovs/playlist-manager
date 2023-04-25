@@ -1,17 +1,20 @@
-import { isAuthenticatedAtom } from '@/modules/spotify/SpotifyAuth'
+import { isAuthenticatedAtom } from '@/modules/spotify/spotifyAuthHooks'
 import { useAtomValue } from 'jotai'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { useEffect } from 'react'
 
 const App = () => {
   const isAuthenticated = useAtomValue(isAuthenticatedAtom)
   const router = useRouter()
 
-  if (!isAuthenticated) {
-    router
-      .push('/app/login')
-      .catch(() => console.error('redirect to "/" failed'))
-  }
+  useEffect(() => {
+    if (!isAuthenticated) {
+      router
+        .push('/app/login')
+        .catch(() => console.error('redirect to "/" failed'))
+    }
+  }, [isAuthenticated, router])
 
   return (
     <div>

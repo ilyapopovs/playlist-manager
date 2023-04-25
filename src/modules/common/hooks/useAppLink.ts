@@ -1,4 +1,4 @@
-import { isAuthenticatedAtom } from '@/modules/spotify/SpotifyAuth'
+import { isAuthenticatedAtom } from '@/modules/spotify/spotifyAuthHooks'
 import { useAtomValue } from 'jotai'
 
 // return `/app` if authenticated, `/app/login` otherwise
