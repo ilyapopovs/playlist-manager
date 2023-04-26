@@ -2,13 +2,13 @@ import {
   initSpotifyAuth,
   refreshAccessToken,
   removeTokens,
-} from '@/modules/spotify/spotifyAuth'
+} from '@/modules/spotify/auth/spotifyAuth'
 import {
   ACCESS_TOKEN_KEY,
   ACCESS_TOKEN_TTL_KEY,
   AuthStorage,
   REFRESH_TOKEN_KEY,
-} from '@/modules/spotify/spotifyAuthStorage'
+} from '@/modules/spotify/auth/spotifyAuthStorage'
 import { atom, useSetAtom } from 'jotai'
 import { useCallback } from 'react'
 

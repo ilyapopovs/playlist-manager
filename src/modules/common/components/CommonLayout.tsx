@@ -2,17 +2,13 @@ import { ActiveLink } from '@/modules/common/components/ActiveLink'
 import {
   isAuthenticatedAtom,
   useLogout,
-} from '@/modules/spotify/spotifyAuthHooks'
+} from '@/modules/spotify/auth/spotifyAuthHooks'
 import { useAtomValue } from 'jotai'
-import { useRouter } from 'next/router'
 import { type FC, type PropsWithChildren } from 'react'
 
 export const CommonLayout: FC<PropsWithChildren> = ({ children }) => {
-  const { isReady, pathname } = useRouter()
   const isAuthenticated = useAtomValue(isAuthenticatedAtom)
   const logout = useLogout()
-
-  console.log('router', { isReady, pathname })
 
   return (
     <div className="min-h-screen">

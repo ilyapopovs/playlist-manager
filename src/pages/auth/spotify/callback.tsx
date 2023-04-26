@@ -1,8 +1,8 @@
 import {
   finishSpotifyAuth,
   refreshAccessToken,
-} from '@/modules/spotify/spotifyAuth'
-import { isAuthenticatedAtom } from '@/modules/spotify/spotifyAuthHooks'
+} from '@/modules/spotify/auth/spotifyAuth'
+import { isAuthenticatedAtom } from '@/modules/spotify/auth/spotifyAuthHooks'
 import { useQuery } from '@tanstack/react-query'
 import { useSetAtom } from 'jotai'
 import { useRouter } from 'next/router'

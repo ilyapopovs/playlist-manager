@@ -2,7 +2,7 @@ import {
   generateCodeChallenge,
   generateCodeVerifier,
   generateRandomString,
-} from '@/modules/spotify/spotifyHelpers'
+} from '@/modules/spotify/auth/spotifyHelpers'
 
 type TRequestUserAuthorization = (
   redirectUrl: string,

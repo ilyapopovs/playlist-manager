@@ -2,8 +2,8 @@ import {
   requestAccessToken,
   requestFirstAccessToken,
   requestUserAuthorization,
-} from '@/modules/spotify/spotifyAuthApi'
-import { BASIC_AUTH_SCOPES } from '@/modules/spotify/spotifyAuthScopes'
+} from '@/modules/spotify/auth/spotifyAuthApi'
+import { BASIC_AUTH_SCOPES } from '@/modules/spotify/auth/spotifyAuthScopes'
 import {
   ACCESS_TOKEN_KEY,
   ACCESS_TOKEN_TTL_KEY,
@@ -11,7 +11,7 @@ import {
   AuthStorage,
   CODE_VERIFIER_KEY,
   REFRESH_TOKEN_KEY,
-} from '@/modules/spotify/spotifyAuthStorage'
+} from '@/modules/spotify/auth/spotifyAuthStorage'
 
 // todo: move to `env` from env.mjs
 const AUTH_API_BASE = process.env.NEXT_PUBLIC_AUTH_API_BASE!

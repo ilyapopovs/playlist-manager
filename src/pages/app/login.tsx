@@ -1,7 +1,7 @@
 import {
   isAuthenticatedAtom,
   useAuthenticate,
-} from '@/modules/spotify/spotifyAuthHooks'
+} from '@/modules/spotify/auth/spotifyAuthHooks'
 import { useAtomValue } from 'jotai'
 import { useRouter } from 'next/router'
 
