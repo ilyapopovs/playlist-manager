@@ -1,3 +1,4 @@
+import { env } from '@/env.mjs'
 import {
   requestAccessToken,
   requestFirstAccessToken,
@@ -13,11 +14,10 @@ import {
   REFRESH_TOKEN_KEY,
 } from '@/modules/spotify/auth/spotifyAuthStorage'
 
-// todo: move to `env` from env.mjs
-const AUTH_API_BASE = process.env.NEXT_PUBLIC_AUTH_API_BASE!
-const AUTH_ACCESS_TOKEN_PATH = process.env.NEXT_PUBLIC_AUTH_ACCESS_TOKEN_PATH!
-const CLIENT_ID = process.env.NEXT_PUBLIC_CLIENT_ID!
-const APP_BASE = process.env.NEXT_PUBLIC_APP_BASE!
+const AUTH_API_BASE = env.NEXT_PUBLIC_AUTH_API_BASE
+const AUTH_ACCESS_TOKEN_PATH = env.NEXT_PUBLIC_AUTH_ACCESS_TOKEN_PATH
+const CLIENT_ID = env.NEXT_PUBLIC_CLIENT_ID
+const APP_BASE = env.NEXT_PUBLIC_APP_BASE
 
 const REDIRECT_URL = APP_BASE + '/auth/spotify/callback'
 
