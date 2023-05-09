@@ -1,11 +1,22 @@
-import { type AppType } from "next/app";
+import { type AppType } from 'next/app'
 
-import { api } from "@/utils/api";
+import { api } from '@/modules/common/utils/api'
 
-import "@/styles/globals.css";
+import '@/modules/common/styles/globals.css'
+import { CommonLayout } from '@/modules/common/components/CommonLayout'
+import { useInitIsAuthenticated } from '@/modules/spotify/auth/spotifyAuthHooks'
+import { useEffect } from 'react'
 
 const MyApp: AppType = ({ Component, pageProps }) => {
-  return <Component {...pageProps} />;
-};
+  const checkOrRefreshExistingAuth = useInitIsAuthenticated()
 
-export default api.withTRPC(MyApp);
+  useEffect(checkOrRefreshExistingAuth, [checkOrRefreshExistingAuth])
+
+  return (
+    <CommonLayout>
+      <Component {...pageProps} />
+    </CommonLayout>
+  )
+}
+
+export default api.withTRPC(MyApp)
