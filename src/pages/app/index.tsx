@@ -1,3 +1,4 @@
+import { UserPlaylists } from '@/modules/spotify/UserPlaylists'
 import { isAuthenticatedAtom } from '@/modules/spotify/auth/spotifyAuthHooks'
 import { useAtomValue } from 'jotai'
 import Link from 'next/link'
@@ -25,6 +26,7 @@ const App = () => {
         <Link href={'/app/login'}>Go to Login page</Link>
       </div>
       App page here
+      <UserPlaylists />
     </div>
   )
 }

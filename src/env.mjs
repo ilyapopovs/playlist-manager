@@ -14,6 +14,7 @@ const server = z.object({
  * To expose them to the client, prefix them with `NEXT_PUBLIC_`.
  */
 const client = z.object({
+  NEXT_PUBLIC_API_BASE: z.string().min(1),
   NEXT_PUBLIC_AUTH_API_BASE: z.string().min(1),
   NEXT_PUBLIC_AUTH_ACCESS_TOKEN_PATH: z.string().min(1),
   NEXT_PUBLIC_CLIENT_ID: z.string().min(1),
@@ -27,6 +28,7 @@ const client = z.object({
  */
 const processEnv = {
   NODE_ENV: process.env.NODE_ENV,
+  NEXT_PUBLIC_API_BASE: process.env.NEXT_PUBLIC_API_BASE,
   NEXT_PUBLIC_AUTH_API_BASE: process.env.NEXT_PUBLIC_AUTH_API_BASE,
   NEXT_PUBLIC_AUTH_ACCESS_TOKEN_PATH:
     process.env.NEXT_PUBLIC_AUTH_ACCESS_TOKEN_PATH,
